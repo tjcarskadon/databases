@@ -1,19 +1,16 @@
 var models = require('../models');
 
+
 module.exports = {
   messages: {
     get: function (req, res) {
-      //call models.messages.get and 
-
-      console.log('this is our messages GET');
-     
+      console.log('this is our controller Messages GET', req.query);
+      models.messages.get(req.query, res);
+      // res.send();
     }, // a function which handles a get request for all messages
     post: function (req, res) {
-      console.log('this is our POST message: ', req.body);
-
-
-      models.messages.post(req.body);
-      res.end();
+      console.log('this is our controller POST: ', req.body);
+      models.messages.post(req.body, res);
        
     } // a function which handles posting a message to the database
   },
@@ -21,14 +18,14 @@ module.exports = {
   users: {
     // Ditto as above
     get: function (req, res) {
-      console.log('users get');
-   
+      console.log('Controller users get');
+      models.users.get(req.body, res);
+     
     },
     post: function (req, res) {
-      // console.log(req.body.Username);
-      //should we do a promise here ?????
-      models.users.post(req.body);
-      res.end();
+      console.log('Controller users post');
+      models.users.post(req.body, res);
+     
     }
   }
 };
