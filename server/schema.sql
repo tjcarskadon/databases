@@ -14,7 +14,8 @@ CREATE TABLE `Messages` (
 CREATE TABLE `User` (
   `id` INTEGER NULL AUTO_INCREMENT,
   `Username` VARCHAR(40) NOT NULL,
-  PRIMARY KEY (`id`)
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `Username` (`Username`)
 );
 
 
