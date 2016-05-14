@@ -1,0 +1,37 @@
+INSERT INTO messages (message,id)
+  SELECT 'This is a new message', id
+  FROM user
+  WHERE name = 'BillyBob'
+
+  insert into messages (message, id)
+  select 'second message!', id
+  from user
+  where user = 'BillyBob'
+
+  INSERT INTO messages 
+  (message)
+  VALUES
+  ('Message number 3');
+
+
+  INSERT INTO rooms 
+  (roomname)
+  VALUES
+  ('firstRoom');
+
+
+  INSERT INTO rooms 
+  (roomname)
+  VALUES
+  ('SecondRoom');
+
+  INSERT INTO rooms 
+  (roomname)
+  VALUES
+  ('ThirdRoom');
+
+
+  INSERT INTO user 
+  (user)
+  VALUES
+  ('BillyBob');

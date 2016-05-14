@@ -2,9 +2,54 @@ CREATE DATABASE chat;
 
 USE chat;
 
-CREATE TABLE messages (
-  /* Describe your table here.*/
+CREATE TABLE `Messages` (
+  `id` INTEGER NOT NULL AUTO_INCREMENT,
+  `text` VARCHAR(140) NOT NULL,
+  `id_User` INTEGER NOT NULL,
+  `id_Rooms` INTEGER NOT NULL,
+  PRIMARY KEY (`id`)
 );
+
+    
+CREATE TABLE `User` (
+  `id` INTEGER NULL AUTO_INCREMENT,
+  `Username` VARCHAR(40) NOT NULL,
+  PRIMARY KEY (`id`)
+);
+
+
+    
+CREATE TABLE `Rooms` (
+  `id` INTEGER NOT NULL AUTO_INCREMENT,
+  `Name` VARCHAR(40) NOT NULL,
+  PRIMARY KEY (`id`)
+);
+
+
+-- CREATE TABLE user (
+--   id INT NOT NULL AUTO_INCREMENT,
+--   name VARCHAR(40) NOT NULL,
+--   PRIMARY KEY (id)
+-- );
+
+-- CREATE TABLE messages (
+--   /* Describe your table here.*/
+--   id INT NOT NULL AUTO_INCREMENT,
+--   text VARCHAR(140) NOT NULL,
+--   PRIMARY KEY (id),
+--   FOREIGN KEY (id)
+--     REFERENCES user(id)
+-- );
+
+
+-- CREATE TABLE rooms (
+--   /* Describe your table here.*/
+--   id INT NOT NULL AUTO_INCREMENT,
+--   roomname VARCHAR(40) NOT NULL,
+--   PRIMARY KEY (id),
+--   FOREIGN KEY (id)
+--     REFERENCES messages(id)
+-- );
 
 /* Create other tables and define schemas for them here! */
 
