@@ -12,7 +12,7 @@ CREATE TABLE `Messages` (
 
     
 CREATE TABLE `User` (
-  `id` INTEGER NULL AUTO_INCREMENT,
+  `id` INTEGER NOT NULL AUTO_INCREMENT,
   `Username` VARCHAR(40) NOT NULL,
   PRIMARY KEY (`id`),
   UNIQUE KEY `Username` (`Username`)
@@ -23,7 +23,8 @@ CREATE TABLE `User` (
 CREATE TABLE `Rooms` (
   `id` INTEGER NOT NULL AUTO_INCREMENT,
   `Name` VARCHAR(40) NOT NULL,
-  PRIMARY KEY (`id`)
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `Name` (`Name`)
 );
 
 

@@ -4,6 +4,7 @@ var models = require('../models');
 module.exports = {
   messages: {
     get: function (req, res) {
+      console.log(req.path, '***********************');
       console.log('this is our controller Messages GET', req.query);
       models.messages.get(req.query, res);
       // res.send();
